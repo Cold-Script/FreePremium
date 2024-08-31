@@ -1,12 +1,3 @@
--- im doors đŸ¤“
--- cv is two cool loking letters no real meaning
--- 435345242533452325423454235gfdsdfgdsgfgsdf
-
---[[
-    todo:
-    ignore this
-]]
-
 warn'hello'
 repeat task.wait() until game:IsLoaded()
 warn'hola'
@@ -702,7 +693,6 @@ group.esp:AddLabel('Item color'):AddColorPicker('cv9', {
         espColors[1] = v
     end
 })
-
 group.esp:AddLabel('Asset color'):AddColorPicker('cv10', {
     Title = 'Asset color',
     Default = espColors[2],
@@ -716,6 +706,22 @@ group.esp:AddLabel('Entity color'):AddColorPicker('cv11', {
     Default = espColors[3],
     Callback = function(v)
         espColors[3] = v
+    end
+})
+group.esp:AddToggle('cv8', {
+    Text = 'Tracers',
+    Default = true,
+    Tooltip = 'Tracer',
+    Callback = function(v)
+        flags.tracers = v
+    end
+})
+group.esp:AddToggle('cv8', {
+    Text = 'Rainbow',
+    Default = true,
+    Tooltip = 'Color is Rainbow',
+    Callback = function(v)
+        flags.espRainbow = v
     end
 })
 -- prompts
@@ -953,3 +959,4 @@ do
     save:BuildConfigSection(configuration)
     theme:ApplyToTab(configuration)
     save:LoadAutoloadConfig()
+end
