@@ -33,7 +33,6 @@ local runService = game:GetService'RunService'
 local UserInputService = game:GetService('UserInputService')
 local lighting = game.Lighting
 local gameData = replicatedStorage.GameData
-local remoteFolder = replicatedStorage.RemotesFolder
 local latestRoom = gameData.LatestRoom
 local floor = gameData.Floor
 
@@ -83,7 +82,7 @@ local flags = {
     noclip = false,
     ncpbypass = false,
     clipPrompts = true,
-    auraPrompts = true,
+    auraPrompts = false,
     reachPrompts = true,
     fly = false,
     esp = true,
