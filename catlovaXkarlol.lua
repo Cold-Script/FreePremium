@@ -709,15 +709,15 @@ group.esp:AddLabel('Entity color'):AddColorPicker('cv11', {
 })
 group.esp:AddToggle('cv8', {
     Text = 'Tracers',
-    Default = true,
-    Tooltip = 'Tracer',
+    Default = false,
+    Tooltip = 'Tracers',
     Callback = function(v)
         flags.tracers = v
     end
 })
 group.esp:AddToggle('cv8', {
     Text = 'Rainbow',
-    Default = true,
+    Default = false,
     Tooltip = 'Color is Rainbow',
     Callback = function(v)
         flags.espRainbow = v
